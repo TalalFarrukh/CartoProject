@@ -1,0 +1,270 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-image: linear-gradient(to bottom right, #2767d9, #58d1ab, #2767d9);
+	padding-bottom: 50px;
+}
+
+svg path {
+	fill: #f0f0f0;
+	stroke: hsla(0, 100%, 0%, 1);
+	stroke-width: 3px;
+}
+
+svg path:hover {
+	fill: #f0f0f0;
+	transistion: 0.6s;
+	cursor: pointer;
+}
+
+
+.Australia {
+	fill: hsla(72, 100%, 54%, 1);
+}
+.Australia:hover {
+	fill: hsla(72, 100%, 68%, 1);
+	filter: drop-shadow( 4px 4px 2.5px rgba(0, 0, 0, .7));
+}
+
+.States {
+	fill: hsla(24, 100%, 54%, 1);
+
+}
+.States:hover {
+	fill: hsla(24, 100%, 68%, 1);
+	filter: drop-shadow( 4px 4px 2.5px rgba(0, 0, 0, .7));
+}
+
+.Pakistan {
+	fill: hsla(116, 100%, 40%, 1);
+}
+.Pakistan:hover {
+	fill: hsla(116, 100%, 59%, 1);
+	filter: drop-shadow( 4px 4px 2.5px rgba(0, 0, 0, .7));
+}
+
+.Japan {
+	fill: hsla(324, 100%, 47%, 1);
+}
+.Japan:hover {
+	fill: hsla(324, 100%, 67%, 1);
+	filter: drop-shadow( 4px 4px 2.5px rgba(0, 0, 0, .7));
+}
+
+.SouthK {
+	fill: #00394f;
+}
+.SouthK:hover {
+	fill: #006284;
+	filter: drop-shadow( 4px 4px 2.5px rgba(0, 0, 0, .7));
+}
+
+.Nigeria {
+	fill: hsla(100, 100%, 17%, 1);
+}
+.Nigeria:hover {
+	fill: hsla(100, 100%, 29%, 1);
+	filter: drop-shadow( 4px 4px 2.5px rgba(0, 0, 0, .7));
+}
+
+.Mexico {
+	fill: hsla(0, 100%, 37%, 1);
+}
+.Mexico:hover {
+	fill: hsla(0, 100%, 46%, 1);
+	filter: drop-shadow( 4px 4px 2.5px rgba(0, 0, 0, .7));
+}
+
+.Kingdom {
+	fill: hsla(244, 100%, 41%, 1);
+}
+.Kingdom:hover {
+	fill: hsla(244, 100%, 55%, 1);
+	filter: drop-shadow( 4px 4px 2.5px rgba(0, 0, 0, .7));
+}
+
+.Spain {
+	fill: hsla(174, 100%, 54%, 1);
+}
+.Spain:hover {
+	fill: hsla(174, 100%, 76%, 1);
+	filter: drop-shadow( 4px 4px 2.5px rgba(0, 0, 0, .7));
+}
+
+.KSA {
+	fill: hsla(313, 100%, 33%, 1);
+}
+.KSA:hover {
+	fill: hsla(313, 100%, 44%, 1);
+	filter: drop-shadow( 4px 4px 2.5px rgba(0, 0, 0, .7));
+}
+
+#tooltip {
+	font-family: Helvetica, sans-serif;
+	font-size: 15px;
+	color: #C5C6C7;
+	line-height: 20px;
+	background-color: #0B0C10;
+  border: 2px solid #C5C6C7;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.Title {
+	padding-top: 20px;
+	text-align: center;
+	-webkit-text-stroke: 2px black;
+	font-family: 'Lato', sans-serif;
+	font-size: 54px; font-weight: 3000;
+	line-height: 58px; margin: 0 0 35px;
+	background-image: linear-gradient(43deg, #e7420c, #d7149f);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.years {
+	text-align: center;
+	margin-bottom: 45px;
+}
+
+button {
+	font-size: 20px;
+	color: white;
+	font-weight: bold;
+	background-image: linear-gradient(43deg, #e7420c, #d7149f);
+	border-radius: 10px;
+	padding: 5px;
+	width: 8%;
+	box-shadow: 3px 3px 2px 2px #383b3c;
+}
+
+button + button {
+	margin-left: 20px;
+}
+
+button:hover {
+	background-color: #006284;
+}
+
+button:active {
+	background-color: white;
+	box-shadow: 3px 3px 2px 2px #006284;
+}
+
+.YearLegend {
+	text-align: center;	color: white;
+	font-family: 'Lato', sans-serif;
+	font-size: 48px; font-weight: 300;
+	background-image: linear-gradient(43deg, #e7420c, #d7149f);
+	border-radius: 10px; padding: 3px;
+	box-shadow: 3px 3px 2px 2px #383b3c;
+	border-top-left-radius: 0; border-bottom-left-radius: 0;
+}
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+#myNav2016Aus, #myNav2017Aus, #myNav2018Aus, #myNav2019Aus, #myNav2020Aus {
+	background-color: rgba(208, 255, 20, 0.9);
+}
+#myNav2016Pak, #myNav2017Pak, #myNav2018Pak, #myNav2019Pak, #myNav2020Pak {
+	background-color: rgba(59, 254, 45, 0.9);
+}
+#myNav2016USA, #myNav2017USA, #myNav2018USA, #myNav2019USA, #myNav2020USA {
+	background-color: rgba(255, 114, 20, 0.9);
+}
+#myNav2016SK, #myNav2017SK, #myNav2018SK, #myNav2019SK, #myNav2020SK {
+	background-color: rgba(0, 98, 132, 0.9);
+}
+#myNav2016SA, #myNav2017SA, #myNav2018SA, #myNav2019SA, #myNav2020SA {
+	background-color: rgba(224, 0, 175, 0.9);
+}
+#myNav2016Jap, #myNav2017Jap, #myNav2018Jap, #myNav2019Jap, #myNav2020Jap {
+	background-color: rgba(255, 50, 173, 0.9);
+}
+#myNav2016Nig, #myNav2017Nig, #myNav2018Nig, #myNav2019Nig, #myNav2020Nig {
+	background-color: rgba(49, 147, 0, 0.9);
+}
+#myNav2016Mex, #myNav2017Mex, #myNav2018Mex, #myNav2019Mex, #myNav2020Mex {
+	background-color: rgba(234, 0, 0, 0.9);
+}
+#myNav2016Spa, #myNav2017Spa, #myNav2018Spa, #myNav2019Spa, #myNav2020Spa {
+	background-color: rgba(50, 255, 234, 0.9);
+}
+#myNav2016UK, #myNav2017UK, #myNav2018UK, #myNav2019UK, #myNav2020UK {
+	background-color: rgba(40, 25, 255, 0.9);
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  width: 100%; /* 100% width */
+  left: 5%; top: 4%;
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+	text-decoration: none;
+	font-size: 32px;
+	color: #f1f1f1;
+	display: block; /* Display block instead of inline */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+	padding: 0px;
+	right: 45px;
+  font-size: 60px;
+	color: white;
+}
+
+.heading-content {
+	font-size: 56px;
+	text-align: center; left: 0%;
+}
+
+.overlay-content p, .para {
+	font-size: 26px;
+	width: 90%;
+	text-align: justify;
+	margin-top: 5px;
+}
+
+img {
+	margin-top: 20px; margin-bottom: 20px;
+	width: 70%;
+	position: relative;
+	left: 10%;
+}
+
+.para li {
+	margin-left: 30px; margin-top: 10px;
+}
